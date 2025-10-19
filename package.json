@@ -6,7 +6,8 @@
     "clear-cache": "rm -rf dist .parcel-cache",
     "start": "npm run clear-cache && parcel serve public/index.html --open",
     "build": "npm run clear-cache && parcel build public/index.html --public-url ./",
-    "serve-local-build": "python -m http.server 3000 --directory dist"
+    "serve-local-build": "python -m http.server 3000 --directory dist",
+    "build-and-deploy": "npm run build && gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "@parcel/transformer-sass": "^2.16.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "gh-pages": "^6.3.0",
     "parcel": "^2.16.0",
     "typescript": "^5.9.3"
   }
